@@ -1,0 +1,168 @@
+// ------------------------------------------------------------------------------------------------------------
+// CHECKBOXES
+// ------------------------------------------------------------------------------------------------------------
+
+// ------------------------------------------------------------------------------------------------------------
+// Multiple select custom checkbox
+// ------------------------------------------------------------------------------------------------------------
+
+// How its written
+// <label class='checkbox'> Label name
+//     <input type=checkbox>
+//     <span class=checkmark>
+// </label>
+
+/// Checkbox height
+///
+/// @group input
+$checkbox-height : 14px;
+
+/// Checkbox width
+///
+/// @group input
+$checkbox-width : 14px;
+
+/// Checkbox and label padding
+///
+/// @group input
+$checkbox-label-padding : 20px;
+
+/// `<label>` class - checkbox container
+/// 
+/// See the example and use all the classes
+///
+/// @name h-checkbox
+/// @group input
+/// @example 
+///<label class='h-checkbox'> Label name
+///    <input type=checkbox>
+///    <span class=h-checkmark>
+///</label>
+.checkbox{
+    @include user-select(none);
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    padding-left: $checkbox-label-padding;
+    font-family: $font-sofia;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+
+/// `<span>` class - checkbox class
+/// 
+/// @name h-checkmark
+/// @group input
+/// @example 
+///<label class='h-checkbox'> Label name
+///    <input type=checkbox>
+///    <span class=h-checkmark>
+///</label>
+.checkmark {
+    position: absolute;
+    // TODO
+    top: 2px;
+    left: 0;
+    height: $checkbox-height;
+    width: $checkbox-width;
+    border: solid 0.3px #eee;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox input:checked ~ .checkmark {
+    background-color: $accent-blue-color;
+    border: 0;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox .checkmark:after {
+    // left: 9px; Original value for 25x25 checkbox
+    left: 5.3px;
+    // top: 5px;
+    top: 1.4px;
+    // width: 5px;
+    width: 2.6px;
+    // height: 10px;
+    height: 6.7px;
+    border: solid $text-white;
+    border-width: 0 0.96px 0.96px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+// ------------------------------------------------------------------------------------------------------------
+// Enable/ Disable checkbox
+// ------------------------------------------------------------------------------------------------------------
+
+input[type="checkbox"].switch {
+    display: none;
+    // position: absolute;
+    // margin: 8px 0 0 16px; 
+}
+input[type="checkbox"].switch + label {
+    position: relative;
+    padding-left: 50px;
+    font-family: $font-sofia;
+}
+input[type="checkbox"].switch + label:before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 2px;
+    width: 40px; /* x*5 */
+    height: 17px; /* x*3 */
+    border-radius: 10px; /* x*2 */
+    background: #fff;
+    background-color: $switch-off-bg;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+input[type="checkbox"].switch + label:after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 2px;
+    top: 3px;
+    width: 15px; /* x*3 */
+    height: 15px; /* x*3 */
+    border-radius: 8px; /* x*2 */
+    background: #fff;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+input[type="checkbox"].switch + label:hover:after {
+    // TODO wht to do
+    // box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+input[type="checkbox"].switch:checked + label:after {
+    margin-left: 21px;
+    // TODO which green
+    // What color when its not checked
+    // background-color: $accent-green-color;
+    background-color: rgb(114,198,40);
+}
+input[type="checkbox"].switch:checked + label:before {
+
+}

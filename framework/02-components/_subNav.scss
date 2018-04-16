@@ -1,0 +1,57 @@
+.app-sub-nav{
+    border-right: solid 0.5px rgba(151, 151, 151, 0.5);
+    min-width: 130px;
+    padding-right: 18px;
+    
+    .app-sub-nav-header{
+        display: flex;
+        padding-left: 14px;
+        
+        span svg{
+            vertical-align: middle;
+        }
+        
+        span.h2{
+            padding-left: 10px;
+        }
+    }
+    
+    span.s3.small{
+        padding-left: 14px
+    }
+    
+    div.app-sub-nav-list{
+        margin-top: 20px;
+        
+        a.selected{
+            div{
+                background-color: #e4eff4;
+                
+                span{
+                    color: #456172;
+                }
+            }
+        }
+        
+        a{
+            @extend a.reset;
+            
+            div{
+                width: 160px;
+                height: 26px;
+                margin-bottom: 7px;
+                border-radius: 4px;
+                
+                span{
+                    color: #688899;
+                    line-height: 26px;
+                    padding-left: 14px;
+                }
+            }
+        }
+    }
+}
+
+.app-main-content{
+    flex-grow: 7;
+}

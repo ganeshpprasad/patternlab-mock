@@ -1,0 +1,155 @@
+@import "neat";
+
+// No of grids in the 
+$grids : 12;
+
+/// Mixin extending `neat`'s grid
+/// 
+/// This is a container with 12 grids( `neat` default )
+/// @name container
+/// @group container
+/// @example 
+///     @include container;
+@mixin container{
+    @include grid-container;
+}
+
+/// Mixin for a container inside a `<div>` 12 grid container.
+/// 
+/// Must be used inside a `<div>` with class *h-container*.
+/// @name sub-container
+/// @param {number} $width - An unitless number between 1 to 12
+/// @group container
+/// @example 
+///    .main-container{
+///        @include sub-container(10);
+///    }
+@mixin sub-container($width){
+    @include grid-column($width);
+}
+
+/// Mixin that creates sub-container with **12 grids** inside a `<div>` with class *h-app-container*.
+///  
+/// @name main-container
+/// @group container
+/// @example 
+///     @include main-container;
+/// @require {mixin} center-container
+@mixin main-container{
+    @include sub-container($grids);
+}
+
+/// Class that creates container.
+///  
+/// @name h-container
+/// @group container
+.container{
+    @include container;
+}
+
+/// Class that creates sub-container ** with 12 grids ** inside a `<div>` with class *h-app-container*.
+///  
+/// @name h-main-container
+/// @group container
+.main-container{
+    @include main-container;
+}
+
+/// Centered container class
+/// 
+/// Responsive container for the mail app.
+/// 
+/// @name h-app-container
+/// @group container
+/// @example
+///     <div class='h-app-container'>
+/// @require {mixin} container
+/// @require {mixin} full-viewport
+.app-container{
+    @include container;
+    @include full-viewport;
+    @extend .app-con-media;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    font-family: $font-sofia;
+}
+
+/// Media class for the app container
+/// 
+/// @name app-con-media
+/// @group container
+.app-con-media{
+    @media screen and (min-width: $tablet){
+        max-width: $tablet-width;
+    }
+    
+    @media screen and (min-width: $desktop){
+        max-width: $desktop-width;
+    }
+    
+    @media screen and (min-width: $widescreen){
+        max-width: $widescreen-width;
+    }
+}
+
+/// Topbar ( Contains hiver logo and back to gmail button ) class
+/// Flex display
+///
+/// @name h-topbar
+/// @group container
+/// @example 
+///     <div class='topbar'>
+.topbar{
+    @include main-container;
+    @include height-percent(100);
+    display: flex;
+}
+
+/// Topbar container class
+/// Which gives the bottom border across the app
+///
+/// @name h-topbar-con
+/// @group container
+/// @example 
+///     <div class='h-topbar-con'>
+.topbar-container{
+    border-bottom: $default-border; 
+    height: $topbar-height;
+}
+
+// Intermediate div to center the topbar and give media query width
+.topbar-container > div{
+    @extend .app-con-media;
+    @include height-percent(100);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/// navbar container class
+/// This gives the grid value of 1
+///
+/// @name h-nav-container
+/// @group container
+/// @example 
+///     <div class='h-nav-con'>
+.nav-container{
+    @include grid-column(1);
+    @include height-percent(100);
+}
+
+.main-app{
+    @include grid-column(11);
+    @include height-percent(100);
+}
+
+/// App container next to main nav 
+/// holds sub nav and master- content in the right
+/// 
+/// @name h-main-app-container
+/// @group container
+
+.main-app-container{
+    display: flex;
+    flex-direction: row;
+}

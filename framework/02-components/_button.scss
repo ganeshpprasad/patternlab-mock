@@ -1,0 +1,47 @@
+
+/// Button's basic sizing and font class.
+/// 
+/// @name h-button
+/// @group buttons
+.button{ 
+    @extend button.reset;
+    height: $button-height;
+    width: $button-width;
+    border-radius: $button-border-radius;
+    font-family: $font-sofia;
+    @extend .letter-space;
+}
+
+/// Primary affirmative button. Uses `$accent-green` color
+/// 
+/// @name h-primary-button
+/// @group buttons
+/// @require {class} .vcenter-margin
+/// @require {class} .button
+.primary-button{
+    @extend .button;
+    @extend .vcenter-margin;
+    //TODO letter spacing for buttons?
+    background-color: $accent-green-color;
+    color: $text-white;
+    font-size: $font-xs;
+}
+
+/// A button with svg icon 
+/// .button class centers the svg
+/// 
+/// @group buttons
+.button svg{
+    display: inline-block;
+    vertical-align: middle;
+    max-height: 100%;
+}
+
+.verify-button{
+    @extend .button;
+    height: $button-height-l;
+    width: $button-width-l;
+    color: $text-dark;
+    padding: 12px 20px;
+    box-shadow: $verify-btn-border;
+}

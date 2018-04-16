@@ -1,0 +1,12 @@
+@import "04-utilities/index",     //
+        "00-libraries/index",     // libraries used - normalize
+        "01-base/index",          // base refers to styles concerning all the tags or all instances of one tag( all <button> tags)
+        "02-components/index",    // components are small blocks(tags)
+        "03-vendor/index",        // vendor specific styling
+        "neat";                   // npm sass plugin for grid
+
+
+// Use markdown while writing description for documentation
+// write html tags inside ``
+// css classes in italics **
+// **Bold**

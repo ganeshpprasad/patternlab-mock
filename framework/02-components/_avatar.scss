@@ -1,0 +1,18 @@
+img.avatar{
+    width:30px;
+    border-radius: 50%
+}
+div.avatar-con {
+    display: inline-block;
+}
+
+div.user-avatar-list {
+    .checkbox {
+        height: 15px;
+    }
+    
+    div.avatar-con {
+        vertical-align: middle;
+        margin: 0 10px;
+    }  
+}

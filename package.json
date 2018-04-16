@@ -1,11 +1,12 @@
 {
-  "name": "@pattern-lab/edition-node-gulp",
+  "name": "patternlabmock",
   "description": "The gulp wrapper around patternlab-node core, providing tasks to interact with the core library and move supporting frontend assets.",
   "version": "2.0.0-alpha.3",
   "main": "gulpfile.js",
   "dependencies": {
     "@pattern-lab/patternengine-node-mustache": "^2.0.0-alpha.1",
     "@pattern-lab/patternlab-node": "^3.0.0-alpha.8",
+    "@pattern-lab/starterkit-mustache-demo": "^4.0.4",
     "@pattern-lab/styleguidekit-assets-default": "^4.0.0-alpha.3",
     "@pattern-lab/styleguidekit-mustache-default": "^4.0.0-alpha.1",
     "gulp": "^3.9.1",
@@ -22,7 +23,9 @@
     "type": "git",
     "url": "git://github.com/pattern-lab/edition-node-gulp.git"
   },
-  "bugs": "https://github.com/pattern-lab/edition-node-gulp/issues",
+  "bugs": {
+    "url": "https://github.com/pattern-lab/edition-node-gulp/issues"
+  },
   "author": "Brian Muenzenmeyer",
   "scripts": {
     "gulp": "gulp -- "
@@ -30,5 +33,6 @@
   "license": "MIT",
   "engines": {
     "node": ">=6.0"
-  }
+  },
+  "homepage": "https://github.com/pattern-lab/edition-node-gulp#readme"
 }

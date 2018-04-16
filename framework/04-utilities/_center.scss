@@ -1,0 +1,79 @@
+
+/// Mixin for horizontal centering a `<div>` inside another container `<div>`.
+/// 
+/// Must be used inside a `<div>` with class *h-container*.
+/// @name center-container
+/// @param {number} $width - An unitless number between 1 to 12
+/// @group container
+/// @example 
+///    .main-container{
+///        @include center-container(10);
+///    }
+@mixin center-container($width){
+    @include grid-column($width);
+    @include grid-shift(($grids - $width)/2);
+}
+
+.fig-center{
+    display: flex;
+    align-items: center;
+}
+
+/// Vertically center an image inside a div. Apply this class to `<img>` tag.
+/// 
+/// We need to have a supporting `<span>` tag next to `<img>` tag to vertical align the image.
+///
+/// @name vcenter-img
+/// @group utilities
+/// @example
+///    <figure>
+///        <span class="h-vcenter-empty"></span>
+///        <img src="./images/hiver1x.png" alt="hiver logo" class="h-vcenter-img">
+///    </figure>
+.vcenter-img{
+    display: inline-block;
+    vertical-align: middle;
+    max-height: 100%;
+}
+
+/// Vertically class to center a sibling image. This class is added to an **empty**
+/// `<span>` tag next to `<img>` tag.
+/// 
+/// This empty tag will be centered and using vertical align rule the image will center itself
+/// 
+/// @name vcenter-empty
+/// @group utilities
+/// @example
+///    <figure>
+///        <span class="h-vcenter-empty"></span>
+///        <img src="./images/hiver1x.png" alt="hiver logo" class="h-vcenter-img">
+///    </figure>
+.vcenter-empty{
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/// Class added to `<span>` **with text** to center a sibling image.
+/// 
+/// @name vcenter-text
+/// @group utilities
+/// @example
+///    <button>
+///        <img src="./images/hiver1x.png" alt="hiver logo" class="h-vcenter-img">
+///        <span class="h-vcenter-text">back to gmail</span>
+///    </button>
+.vcenter-text{
+    display: inline-flex;
+    align-items: center;
+    @extend .vcenter-empty;
+}
+
+/// Vertically centers a `<div>` element using margin- :auto
+/// 
+/// @name vcenter-margin
+/// @group utilities
+.vcenter-margin{
+    margin-top: auto;
+    margin-bottom: auto;
+}

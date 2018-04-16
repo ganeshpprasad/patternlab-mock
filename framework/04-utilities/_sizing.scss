@@ -1,0 +1,20 @@
+/// Mixin to make the element's height fit entire viewport - used on root `<div>`
+/// 
+/// @name full-viewport
+/// @group container
+/// @example 
+///     @include full-viewport;
+@mixin full-viewport{
+    height: $fullvh;
+}
+
+/// Mixin to set the element's height in percent
+/// 
+/// @name height-percent
+/// @group container
+/// @example 
+///     @include height=percent(100);
+@mixin height-percent($percent){
+    height: $percent + %;
+}
+

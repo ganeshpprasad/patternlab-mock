@@ -1,0 +1,24 @@
+
+// 
+
+
+input[type="text"].emailid{
+    @extend .h2;
+    @extend .reset;
+    width: 90%;
+    height: 30px; // REM??
+    border: $default-border;
+    border-color: $smtable-groups-color;
+    border-radius: $textbox-border-radius;
+    padding-left: $textbox-left-padding;
+}
+
+.emailid::placeholder{
+    @extend .s2;
+    opacity: $placeholder;
+}
+
+input[type="text"].sm-input{
+    @extend .emailid;
+    border: $default-border;
+}

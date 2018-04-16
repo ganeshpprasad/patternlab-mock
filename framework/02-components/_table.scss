@@ -1,0 +1,74 @@
+
+/// table head class
+///
+/// @name h-thead
+/// @group table
+/// @example 
+///    <div class="h-thead">
+///        <span class="h-tcell h-thead-cell">name</span>
+///        <span class="h-tcell h-thead-cell">mailbox email id</span>
+///    </div>
+.thead{
+    background-color: $secondary-bg-color;
+    @extend .trow;
+}
+
+
+/// table head cell class
+/// 
+/// @name h-thead-cell
+/// @group table
+/// @example 
+///    <div class="h-thead">
+///        <span class="h-tcell h-thead-cell">name</span>
+///        <span class="h-tcell h-thead-cell">mailbox email id</span>
+///    </div>
+.thead-cell{
+    text-transform: uppercase;
+    @extend .tcell;
+}
+
+
+/// table cell class
+/// 
+/// @name h-tcell
+/// @group table
+/// @example 
+/// <div class="h-table">
+///    <div class="h-thead">
+///        <span class="h-tcell h-thead-cell">name</span>
+///    </div>
+///    <div class="h-trow">
+///        <span class="h-tcell ">users & groups</span>
+///        <span class="h-tcell ">users & groups</span>
+///    </div>
+///</div>
+.tcell{
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-left: 3%;
+    flex-grow: 1;
+    // Only if there are 3 columns in the table 
+    max-width: 30%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/// table row class
+/// 
+///
+/// @name h-trow
+/// @group input
+/// @example 
+///    <div class="h-trow">
+///        <span class="h-tcell ">users & groups</span>
+///        <span class="h-tcell ">users & groups</span>
+///    </div>
+.trow{
+    height: 42px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}

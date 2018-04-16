@@ -1,0 +1,18 @@
+/// Add h-hide class to hide any element.
+/// Can be used inside any tag.
+/// 
+/// @name h-hide
+/// @group base
+/// @example 
+///     <div class='h-hide'>
+.hide{
+    display: none !important;
+}
+
+// TODO responsive image
+
+// chrome font fix TODO decide if neede
+.chrome-font-fix{
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+}

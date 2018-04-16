@@ -1,0 +1,202 @@
+
+// Opacity
+$msg-bg : 0.3;
+$disabled : 0.4;
+$placeholder : 0.6;
+
+// -----------------------------------------------------------------------
+// COLORS
+// -----------------------------------------------------------------------
+
+// Background colors
+
+/// Main background color is white.
+/// 
+/// @group base
+$main-bg-color : rgba(255, 255, 255, 1);
+
+/// Background color for table heading.
+/// 
+/// #cbe0e9
+/// 
+/// @group base
+$secondary-bg-color : rgba(203,224,233, 0.2);
+
+/// Accent color for main action buttons and
+/// to show selections
+/// 
+/// #59ddb1;
+///
+///@group base
+$accent-green-color : rgb(89,221,177);
+
+/// Accent color for app action buttons 
+/// 
+/// #0074E4
+///
+///@group base
+$accent-blue-color : rgba(0, 116, 228, 1);
+
+/// Horizontal line gray colors
+/// 
+/// #979797
+/// 
+/// @group base
+$grey-line : rgb(151, 151, 151);
+
+$grey-line-light : rgba(151, 151, 151, 0.5);
+
+// Text colors
+
+/// Primary text color
+/// 
+/// #253D4C
+///
+///@group base
+$primary-text-color : rgba(37, 61, 76, 1);
+
+/// Secondary text color
+/// 
+/// #618093
+///
+///@group base
+$secondary-text-color : rgba(97, 128, 147, 1);
+
+/// White text for accented button
+///
+///@group base
+$text-white : $main-bg-color;
+
+
+$text-dark : rgb(48,48,48);
+
+/// smtable - users number element colors
+/// 
+/// #FBC841
+///
+///@group base
+$smtable-users-color : rgba(251, 200, 65, 1);
+
+/// smtable - groups number element colors
+/// 
+/// #96D0E5
+///
+///@group base
+$smtable-groups-color : rgba(150, 208, 229, 1);
+
+/// Background color for affirmation message
+/// 
+/// #A0D6F9
+///
+///@group base
+$affirm-bg-color : rgba(160, 214, 249, $msg-bg);
+
+/// Background color for danger message
+/// 
+/// #F28686
+///
+///@group base
+$danger-bg-color :rgba(242, 134, 134, 1); 
+
+
+/// Background color for accented msgs
+/// 
+/// #ffebde
+/// 
+/// @group base
+$accent-pink-color : rgb(255,235,222);
+
+
+$switch-off-bg : rgb(231,236,237);
+
+// -----------------------------------------------------------------------
+// DIMENSIONS
+// -----------------------------------------------------------------------
+
+// Buttons
+// -----------------------------------------------------------------------
+/// Button height and width
+///
+///@group buttons
+$button-width : 140px;
+$button-height : 34px;
+
+$button-width-l : 220px;
+$button-height-l : 60px;
+
+/// Button border radius
+///
+///@group buttons
+$button-border-radius : 4px;
+
+
+// Screen Sizes
+// -----------------------------------------------------------------------
+
+/// Min width for widescreen media 
+/// 
+/// Width of the body
+///
+///@group base
+$widescreen : 1200px;
+$widescreen-width : 1140px;
+
+/// Min width for desktop media 
+/// 
+/// Width of the body
+///
+///@group base
+$desktop : 1000px;
+$desktop-width : 960px;
+
+/// Min width for tablet media 
+/// 
+/// Width of the body
+///
+///@group base
+$tablet : 768px;
+$tablet-width : 720px;
+
+
+// hr
+// -----------------------------------------------------------------------
+
+/// horizontal rule height and margin
+/// 
+///@group base
+$hr-height : 1px;
+$hr-margin : 1.5em 0;
+
+// -----------------------------------------------------------------------
+/// Full viewport height
+/// 
+///@group base
+$fullvh : 100vh;
+
+// -----------------------------------------------------------------------
+/// Default height of the topbar
+/// 
+///@group base
+$topbar-height : 60px;
+
+// -----------------------------------------------------------------------
+/// Default height of the msgs shown inside app
+/// main area
+/// 
+///@group base
+$msg-height : 30px;
+
+// -----------------------------------------------------------------------
+$textbox-border-radius : 2px;
+$textbox-left-padding : 10px;
+
+// -----------------------------------------------------------------------
+// DEFAULTS
+// -----------------------------------------------------------------------
+
+/// Default border rule
+/// 
+///@group base
+$default-border: solid 1px $grey-line-light;
+
+$verify-btn-border : 0 2px 4px 0 rgba(0, 0, 0, 0.15);

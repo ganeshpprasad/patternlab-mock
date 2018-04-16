@@ -1,0 +1,49 @@
+/**
+ * More normalise.
+ * Written here for easier access 
+ */
+
+// Class name reset is used to avoid conflict with gmail elements
+
+/// Normalize buttons.
+/// @group base
+button.reset{
+    border: 0;
+    background: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+/// Remove blue outline on click.
+/// @group base
+button.reset:focus{
+    outline: 0;
+}
+
+/// Normalize figure.
+/// @group base
+figure.reset{
+    margin: 0;
+}
+
+/// Normalize ul.
+/// @group base
+ul.reset{
+    margin : 0;
+    padding: 0;
+    
+    /// Normalize li.
+    /// @group base
+    li{
+        list-style-type: none;
+    }
+}
+
+a.reset{
+    text-decoration: none;
+    color: inherit;
+}
+
+input[type="text"].reset:focus{
+    outline: 0;   
+}

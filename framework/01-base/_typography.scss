@@ -1,0 +1,323 @@
+// link color and hover reset
+
+// Primary color
+.primary{
+    color: $primary-text-color;
+}
+
+// Secondary color
+.secondary{
+    color: $secondary-text-color;    
+}
+
+// Default letter spacing 
+.letter-space{
+    letter-spacing: 0.6px;
+}
+
+// Base class for primary text
+.h{
+    @extend .letter-space;
+    @extend .primary;
+    font-family: $font-sofia;
+    font-weight: $wt-normal;
+}
+
+// Base class for secondary text
+.s{
+    @extend .letter-space;
+    @extend .secondary;
+    font-weight: $wt-normal;
+    font-family: $font-sofia;
+}
+
+// Primary texts
+
+/// 18px primary section heading
+/// 
+/// @name h1
+/// 
+/// @group typography
+.h1{
+    @extend .h;
+    font-size: $font-l;
+}
+
+/// 16px primary section sub heading
+/// 
+/// @name h2
+/// 
+/// @group typography
+.h2{
+    @extend .h;
+    font-size: $font-m;
+}
+
+/// 14px primary content font
+/// 
+/// @name h3
+/// 
+/// @group typography
+.h3{
+    @extend .h;
+    font-size: $font-s;
+}
+
+// Secondary text
+
+/// 18px secondary section title
+/// 
+/// @name s1
+/// 
+/// @group typography
+.s1{
+    @extend .s;
+    font-size: $font-l;
+}
+
+/// 16px secondary section sub title
+/// 
+/// @name s2
+/// 
+/// @group typography
+.s2{
+    @extend .s;
+    font-size: $font-m;
+}
+
+/// 14px secondary text
+/// 
+/// @name s3
+/// 
+/// @group typography
+.s3{
+    @extend .s;
+    font-size: $font-s;
+}
+
+// Stand out text
+
+/// 18px primary msg
+/// 
+/// @name m1
+/// 
+/// @group typography
+.m1{
+    @extend .letter-space;
+    @extend .secondary;
+    font-size: $font-l;
+    font-weight: $wt-light;
+    font-family: $font-sofia;
+}
+
+/// 18px secondary msg
+/// 
+/// @name m1
+/// 
+/// @group typography
+.m2{
+    @extend .letter-space;
+    @extend .primary;
+    font-size: $font-l;
+    font-weight: $wt-light;
+    font-family: $font-sofia;
+}
+
+// Disabled
+
+/// Disabled state to any text
+/// 
+/// @name disabled
+/// 
+/// @group typography
+.disabled{
+    opacity: $disabled;
+    cursor: default;
+}
+
+/// Small text
+/// 
+/// @name small
+/// 
+/// @group typography
+.small{
+    font-size: $font-xs;
+}
+
+/// Hover state for texts
+/// 
+/// @name hovered
+/// 
+/// @group typography
+// TODO check this with designer
+.hovered:hover{
+    @extend .bold;
+    cursor: pointer;
+}
+
+/// Bold weight state to text
+/// 
+/// @name bold
+/// 
+/// @group typography
+.bold{
+    font-weight: $wt-bold;
+}
+
+/// Light weight state to text
+/// 
+/// @name light
+/// 
+/// @group typography
+.light{
+    font-weight: $wt-light;
+}
+
+// 
+// Design specific elements
+// 
+
+// 'Users and Groups' number in sm table
+$u-g-no-width : 40px;
+$u-g-no-height : 20px;
+$u-g-no-border-radius : 20px;
+$u-g-no-line-height : 1.16rem;
+
+/// Base class for
+/// Users and groups number in the sm table
+/// 
+/// @name u-g-no
+/// 
+/// @group typography
+.u-g-no{
+    display: inline-block;
+    width: $u-g-no-width;
+    height: $u-g-no-height;
+    border-radius: $u-g-no-border-radius;
+    line-height: $u-g-no-line-height;
+    text-align: center;
+    font-family: $font-sofia;
+    // TODO in zeplin it says Lato
+    font-size: $font-12;
+    font-weight: $wt-light;
+    color: $text-white;
+}
+
+/// Users number in the sm table
+/// 
+/// @name users
+/// 
+/// @group typography
+.users{
+    @extend .u-g-no;
+    background-color: $smtable-users-color;
+}
+
+/// Groups number in the sm table
+/// 
+/// @name groups
+/// 
+/// @group typography
+.groups{
+    @extend .u-g-no;
+    background-color: $smtable-groups-color;
+}
+
+// Text with background
+
+/// Base class for
+/// Text with a background color
+/// 
+/// @name msg-text
+/// 
+/// @group typography
+.msg-text{
+    font-size: $font-s;
+    font-weight: $wt-normal;
+    display: inline-block;
+    vertical-align: sub;
+    font-family: $font-sofia;
+}
+
+/// Positive message con with a primary background color
+/// 
+/// @name affirm-con
+/// 
+/// @group typography
+.affirm-con{
+    background-color: $affirm-bg-color;
+    height: $msg-height;
+}
+
+/// Positive message text with a primary background color
+/// 
+/// @name affirm-text
+/// 
+/// @group typography
+.affirm-text{
+    @extend .msg-text;
+    color: $secondary-text-color;
+}
+
+/// Negative message con with a negative background color
+/// 
+/// @name danger-con
+/// 
+/// @group typography
+.danger-con{
+    background-color: $danger-bg-color;
+    height: $msg-height;
+}
+
+/// Negative message text with a negative background color
+/// 
+/// @name danger-text
+///
+/// @group typography
+.danger-text{
+    @extend .msg-text;
+    color: $text-white;
+}
+
+// Responsive text
+
+// links
+/// Base class for links
+/// 
+/// @name links
+/// 
+/// @group typography
+.link{
+    font-size: $font-s;
+    font-family: $font-sofia;
+    font-weight: $wt-normal;
+    display: inline-block;
+}
+
+/// Links in messages with large 
+/// padding for underline
+/// 
+/// @name msg-link
+/// 
+/// @group typography
+.msg-link{
+    @extend .link;
+    color: $primary-text-color;
+    // TODO move this into a class if more 
+    // classes for links need
+    text-decoration: none;
+    border-bottom: 1px solid $primary-text-color;
+    padding-bottom: 2px;
+}
+
+/// Links in negative messages with default underline
+/// 
+/// @name danger-link
+/// 
+/// @group typography
+.danger-link{
+    @extend .link;
+    color: $text-white;
+    // TODO vertical align in all cases
+    vertical-align: sub;
+}
